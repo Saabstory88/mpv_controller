@@ -1,0 +1,25 @@
+{
+  "name": "mpv_controller",
+  "version": "0.0.1",
+  "description": "A controller system for mpv instance",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saabstory88/mpv_controller.git"
+  },
+  "keywords": [
+    "MPV",
+    "video",
+    "server",
+    "controller"
+  ],
+  "author": "Peter Milo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saabstory88/mpv_controller/issues"
+  },
+  "homepage": "https://github.com/Saabstory88/mpv_controller#readme"
+}
