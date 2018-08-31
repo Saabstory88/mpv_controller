@@ -1,4 +1,5 @@
 const moment = require('moment');
+const util = require('util');
 
 const LOG_FORMAT = "YYYY-MM-DD, HH:mm:ss:SS";
 
@@ -11,27 +12,19 @@ class SuperLogger {
       }
     }
 
+    this.logInternal('Created a new logger based on these options: \n' + util.inspect(opts));
+
     this._logFormat = LOG_FORMAT;
   }
 
-  timeStamp(){
-    return moment().format(this._logFormat) + ": ";
-  }
-
-  createTimestamp() {
-    let now = moment();
-    let timeStamp = {
-      nowUnix: now.valueOf(),
-      nowHuman: now.format(this._logFormat),
-      moduleName: this.moduleName
+  logInternal(msg){
+    if(this._debug){
+      console.log(msg);
     }
-    return timeStamp;
   }
 
-  formatHeader(timeStamp){
-    let fStamp = timeStamp.moduleName + '\n';
-    fStamp += timeStamp.nowUnix + '\n';
-    fStamp += timeStamp.nowHuman + '\n';
+  timeStamp(){
+    return moment().format(this._logFormat) + " | ";
   }
 
 }
