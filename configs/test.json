@@ -1,0 +1,42 @@
+{
+  "mediaPath": "D:/",
+  "playModes": [
+    {
+      "mode": "rss_test_1",
+      "type": "file",
+      "mediaPath": "H:/Media/",
+      "contents": ["RSS_TEST_1.mp4"],
+      "loop": "yes"
+    },{
+      "mode": "rss_test_2",
+      "type": "file",
+      "mediaPath": "H:/Media/",
+      "contents": ["RSS_TEST_2.mp4"],
+      "loop": "yes"
+    },{
+      "mode": "rss_test_3",
+      "type": "playlist",
+      "mediaPath": "H:/Media/",
+      "contents": ["RSS_TEST_1.mp4", "RSS_TEST_2.mp4"],
+      "loop": "inf"
+    },{
+      "mode": "blank",
+      "type": "file",
+      "mediaPath": "H:/Media/",
+      "contents": ["blank.png"],
+      "loop": "yes"
+    }
+  ],
+  "players": [
+    {
+      "name": "left",
+      "args": ["--fs-screen=0"]
+    },{
+      "name": "right",
+      "args": ["--fs-screen=1"]
+    }
+  ],
+  "common": {
+    "args": ["--player-operation-mode=pseudo-gui", "--fs", "--idle", "--no-osc"]
+  }
+}

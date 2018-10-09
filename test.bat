@@ -1,0 +1,1 @@
+node send.js left:mode:rss_test_1
